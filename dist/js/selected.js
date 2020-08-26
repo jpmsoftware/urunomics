@@ -11,7 +11,7 @@ function LoadInfo() {
     var h2 = document.getElementsByTagName('h2')[0];
     var descripcion = document.getElementById('descripcion');
     var unidad = document.getElementById('unidad');
-    var ultimo = document.getElementById('ult-dato');
+    var ultimo = document.getElementById('ult-dato').innerHTML = "Último dato: Diciembre, 2019";
 
     var selOpt = sessionStorage.getItem('SelectedOpt');
 
