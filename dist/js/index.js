@@ -10,8 +10,22 @@ window.onload = () => {
         // no hay session, inicializar
         sessionStorage.setItem("SelectedOpt", "index");
     }
+    alert(sessionStorage.getItem('SelectedOpt'));
     ClearAll();
     SlideShow();
+
+    var ctx = document.getElementById('grafica').getContext('2d');
+    var chart = new chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1960', '1961', '1962', '1963', '1964', '1965'],
+            datasets: [{
+                label: 'PBI',
+                backgroundColor: 'rgb(100, 100, 100)',
+                data: [1242, 1547, 1710, 1540, 1976, 1891]
+            }]
+        }
+    })
 }
 
 nav.onclick = (e) => {
