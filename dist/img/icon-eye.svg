@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110">
+  <g id="icon-eye" transform="translate(-706 -834)">
+    <g id="Group_45" data-name="Group 45" transform="translate(93 381)">
+      <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(613 453)" fill="none" stroke="#fff" stroke-width="1">
+        <rect width="110" height="110" rx="5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="109" height="109" rx="4.5" fill="none"/>
+      </g>
+    </g>
+    <g id="layer1" transform="translate(530.482 586.87)">
+      <g id="g3178" transform="translate(-16 1)">
+        <path id="path3159" d="M215.827,310.282c-21.506.02-38.937-20.973-39.281-22.039-.843-2.577,17.128-22.093,38.627-22.113s39.591,20.265,39.281,22.039c-.121.688-16.386,21.728-37.473,22.1" transform="translate(31 13)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        <path id="path3168" d="M603.846,389.575a7.5,7.5,0,1,1-.067.007" transform="translate(-358.131 -96.291)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

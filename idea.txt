@@ -1,0 +1,11 @@
+mostrar principales indicadores económicos del uruguay (gráficamente):
+(y otra información interesante)
+
+- PBI
+- PBI interanual
+- PBI per cápita
+- inflación
+- desempleo
+- otros
+
+- simulador de crecimiento
