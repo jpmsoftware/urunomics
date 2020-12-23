@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+
+<body>
+    <h1>Hello. This is a test</h1>
+    <canvas id="chart" width="800" height="400"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script defer>
+        var labels = '<%= data.map((element) => element.key) %>';
+        var data = '<%= data.map((element) => element.value) %>';
+        labels = labels.split(',');
+        data = data.split(',');
+
+        var ctx = document.getElementById('chart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    borderColor: 'rgb(27, 132, 172)',
+                    backgroundColor: 'rgba(27, 132, 172, .5)',
+                    data: data
+                }]
+            },
+            options: {
+                elements: {
+                    point: { radius: 4 }
+                },
+                legend: { display: false },
+                responsive: false
+            }
+        });
+    </script>
+</body>
+
+</html>
