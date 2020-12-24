@@ -2,11 +2,32 @@
 
 <head>
     <title>Test</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link id="icon" rel="icon" href="/img/favicon.svg">
 </head>
 
-<body>
-    <h1>Hello. This is a test</h1>
-    <canvas id="chart" width="800" height="400"></canvas>
+<body style="background: #F0F0F0">
+    <header style="background: linear-gradient(180deg, rgba(32,92,172,1) 0%, rgba(16,46,86,1) 100%); padding: 1em;" class="header">
+        <div class="wrapper">
+            <a href="/"><p class="title">URUNOMIC</p></a>
+            <div class="menu">
+                <div class="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p class="indicadores">INDICADORES</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <span class="indicator-name">PBI</span>
+        <hr>
+        <span class="indicator-description">El producto bruto interno expresa el total de la producción de bienes y servicios de un país durante un período determinado</span>
+        <canvas id="chart" width="1200px" height="600px"></canvas>
+    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script defer>

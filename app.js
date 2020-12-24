@@ -7,6 +7,10 @@ app.use(express.static('dist'));
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
 app.get('/:categoria/:indicador', (req, res) => {
     let path;
     let data;
@@ -19,6 +23,7 @@ app.get('/:categoria/:indicador', (req, res) => {
         res.render('indicator', { data: obj });
     }
     catch (err) {
+        res.status = 404;
         res.end('Error en la ruta');
     }
 });
@@ -26,3 +31,8 @@ app.get('/:categoria/:indicador', (req, res) => {
 app.listen(PORT, () => {
     console.log('Server started on port: ' + PORT);
 });
+
+app.use((req, res) => {
+    res.status = 404;
+    res.end('Error 404 not found');
+})
