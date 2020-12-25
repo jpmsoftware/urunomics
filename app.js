@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('pages/index');
 });
 
 app.get('/:categoria/:indicador', (req, res) => {
@@ -20,7 +20,7 @@ app.get('/:categoria/:indicador', (req, res) => {
         path = `./data/${req.params.categoria}/${req.params.indicador}.json`;
         data = require(path);
         obj = data;
-        res.render('indicator', { data: obj });
+        res.render('pages/indicator', { data: obj });
     }
     catch (err) {
         res.status = 404;

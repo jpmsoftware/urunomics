@@ -1,6 +1,7 @@
 {
     "name": "PBI",
-    "description": "pbi description",
+    "description": "El Producto Bruto Interno expresa el total de la producción de bienes y servicios de un país durante un tiempo determinado",
+    "unit": "(Miles de Millones USD)",
     "dataset": [
         {
             "key": "1960",

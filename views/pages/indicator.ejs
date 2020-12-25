@@ -10,29 +10,24 @@
     <header style="background: linear-gradient(180deg, rgba(32,92,172,1) 0%, rgba(16,46,86,1) 100%); padding: 1em;" class="header">
         <div class="wrapper">
             <a href="/"><p class="title">URUNOMIC</p></a>
-            <div class="menu">
-                <div class="burger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <p class="indicadores">INDICADORES</p>
-            </div>
+            <%- include('../partials/menu.ejs') %>
         </div>
     </header>
 
     <div class="wrapper">
-        <span class="indicator-name">PBI</span>
-        <hr>
-        <span class="indicator-description">El producto bruto interno expresa el total de la producción de bienes y servicios de un país durante un período determinado</span>
+        <p class="indicator-name"></p>
+        <hr class="separator">
+        <p class="indicator-description"></p>
+        <p class="indicator-unit"></p>
         <canvas id="chart" width="1200px" height="600px"></canvas>
     </div>
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script defer>
         var name = '<%= data.name %>';
         var description = '<%= data.description %>';
+        var unit = '<%= data.unit %>'
         var labels = '<%= data.dataset.map((element) => element.key) %>';
         var data = '<%= data.dataset.map((element) => element.value) %>';
         labels = labels.split(',');
@@ -40,6 +35,8 @@
 
         document.querySelector('.indicator-name').innerHTML = name;
         document.querySelector('.indicator-description').innerHTML = description;
+        document.querySelector('.indicator-unit').innerHTML = unit;
+        document.querySelector('title').innerHTML = name;
 
         var ctx = document.getElementById('chart').getContext('2d');
         var chart = new Chart(ctx, {
@@ -61,6 +58,7 @@
             }
         });
     </script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>
